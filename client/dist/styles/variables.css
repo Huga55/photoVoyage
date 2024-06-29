@@ -1,0 +1,39 @@
+/**
+color: #333333;
+color: #000000;
+color: #2e4d2c;
+color: #1f3a93;
+color: #4e342e;
+color: #800000;
+
+color: #666666;
+color: #a2bbaa;
+color: #a0c4ff;
+*/
+
+:root {
+    --color-background-main: #f2f2f2;
+    --color-text-main: #333333;
+    --color-background-primary: #cad1c9;
+    --color-background-secondary: #b2bdaf;
+    --color-background-window: #ffffff;
+    --color-text-primary: #666666;
+
+    --color-border-primary: #333333;
+
+    --color-field-border: #cad1c9;
+    --color-field-border-hover: #b2bdaf;
+
+    --color-button-background: #b2bdaf;
+    --color-button-text: #333333;
+    --color-button-background-hover: #cad1c9;
+
+    --shadow-window: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --title-size: 42px;
+    --title-margin-bottom: 40px;
+
+    --price-example-size-k: 20;
+
+    --examples-size-k: 30;
+}
