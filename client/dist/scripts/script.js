@@ -151,3 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
   handleQuestion();
   handleFeedbackForm();
 });
+
+$(document).ready(function () {
+  $(".examples__slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    variableWidth: true,
+  });
+});
