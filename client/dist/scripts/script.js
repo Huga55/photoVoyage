@@ -157,8 +157,42 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true,
     variableWidth: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $(".header__burger").click(function () {
+    $(".header__wrapper").toggleClass("header__wrapper_open");
+    $(this).toggleClass("header__burger_open");
+  });
+});
+
+// JavaScript для плавной прокрутки с учетом высоты шапки
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    const headerOffset = document.querySelector("header").offsetHeight;
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   });
 });
